@@ -58,7 +58,10 @@ services:
 
   db:
     image: postgres:9.4
+    ports:
+        - '5432:5432'
     environment:
+      PGDATA: /var/lib/postgresql/daata/pgdata
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres"
     volumes:
